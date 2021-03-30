@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: com.amir.rest.webservices.restfulwebservices.RestfulWebServi
+ cesApplication
+

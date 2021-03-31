@@ -30,6 +30,7 @@ public class UserJPAResource {
 	private UserRepository userRepository;
 
 	//retriveAllUsers-
+	@CrossOrigin("*")
 	@GetMapping("/jpa/users")
 	public List<User> retrieveAllUser()
 	{
@@ -38,6 +39,7 @@ public class UserJPAResource {
 
 
 	//retriveAllUsers-
+	@CrossOrigin("*")
 	@GetMapping("/jpa/users_sortById")
 	public List<User> retrieveAllUser_sortById()
 	{
@@ -47,6 +49,7 @@ public class UserJPAResource {
 	}
 
 	//retriveAllUsers-
+	@CrossOrigin("*")
 	@GetMapping("/jpa/users_sortByType")
 	public List<User> retrieveAllUser_sortByType()
 	{
@@ -79,6 +82,7 @@ public class UserJPAResource {
 //	
 	
 // Complemented with HATEoas to return extra information
+    @CrossOrigin("*")
 	@GetMapping("/jpa/users/{id}")
 	public EntityModel<User> retrieveUser(@PathVariable int id) {
 		Optional<User> user = userRepository.findById(id);
@@ -101,15 +105,15 @@ public class UserJPAResource {
 		return resource;
 	}
 
-
+	@CrossOrigin("*")
 	@DeleteMapping("/jpa/users/{id}")
  public void deleteUser(@PathVariable int id)
  {
 	 	   userRepository.deleteById(id);
 
  }
-	
-	
+
+	@CrossOrigin("*")
 	@PostMapping("/jpa/users")
 	public ResponseEntity<User> createUser(@Valid @RequestBody User user)
 	{
@@ -125,6 +129,7 @@ public class UserJPAResource {
 	}
 
 	@PostMapping("/jpa/users/update/{id}")
+	@CrossOrigin("*")
 	public ResponseEntity<User> updateUser(@PathVariable int id, @Valid @RequestBody User user)
 	{
 

@@ -7,7 +7,7 @@ The H2 in-memory DB has no data so you can create an entity, which is implements
 
 {
     "name": "Amir",
-     "type": "20",
+     "type": "21",
      "description": "Developer",
     "creationTime": "2020-03-29 14:12:15"
 }
@@ -19,7 +19,20 @@ Remember that +the pattern for creation time is pattern="yyyy-MM-dd HH:mm:ss"
 			  
 The action 'Deletion' is just based on ID			  
 
-
+---------------------------------------------
 For the list of APIs, please refer to Swagger documentations: 
 
 	http://localhost:8080/swagger-ui/
+	http://localhost:8080/v2/api-docs
+----------------------------------------------------------
+	
+The H2 UI is accessible in http://localhost:8080/h2-console	
+
+Table name is : jdbc:h2:mem:mytestdb
+	
+------------------------------------------------------------
+ Docker hub Repository: 
+dockerstudent62/restful-web-services 
+For running the image   : docker run -p 8080:8080 [restful-web-services]
+------------------------------------------------------------------
+

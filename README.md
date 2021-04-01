@@ -33,5 +33,5 @@ Table name is : jdbc:h2:mem:mytestdb
  Docker hub Repository: 
 dockerstudent62/restful-web-services 
 For running the image   : docker run -p 8080:8080 [restful-web-services]
-------------------------------------------------------------------
+
 

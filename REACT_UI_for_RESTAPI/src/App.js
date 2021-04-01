@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactDOM from 'react-dom'; // this is recommended 
 import "./App.css";
 import FetchRandomUser from "./components/FetchRandomUser";
 
@@ -133,7 +134,7 @@ class App extends Component {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-md-8">
-              <h1 className="display-4 text-center">Resct UI for Rest APIs</h1>
+              <h1 className="h5 text-center">React UI for Rest APIs</h1>
               <form className="d-flex flex-column">
                 <legend className="text-center">CRUD for Entity</legend>
                 <label htmlFor="name">
@@ -177,6 +178,7 @@ class App extends Component {
                   <input
                     name="creationTime"
                     id="creationTime"
+                    placeholder="yyyy-MM-dd HH:mm:ss"
                     type="text"
                     className="form-control"
                     value={this.state.creationTime}
@@ -199,11 +201,11 @@ class App extends Component {
                 <button className="btn btn-primary" type='button' onClick={(e) => this.create(e)}>
                   Add
                 </button>
-                <button className="btn btn-info" type='button' onClick={(e) => this.update(e)}>
-                    Update
+                <button className="btn btn-success" type='button' onClick={(e) => this.update(e)}>
+                    Update By ID
                 </button>
                 <button className="btn btn-danger" type='button' onClick={(e) => this.delete(e)}>
-                    Delete
+                    Delete By ID
                 </button>
               </form>
               <Entities entities={this.state.entities} />

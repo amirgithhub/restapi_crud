@@ -36,6 +36,6 @@ dockerstudent62/restful-web-services
 The image Tag: latest2
 
 
-For running the image   : docker run -p 8080:8080 [restful-web-services]
+For running the image   : docker run -p 8080:8080 [restful-web-services]:latest2
 
 
